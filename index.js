@@ -12,15 +12,23 @@ class App extends Component {
 
     
   
-  
+
   }
 
-  handleButtonClick =()=> {
+  handleButtonInc =()=> {
     this.setState({
-      count: this.state.count += 1
+      count: this.state.count + 1
     })
     
   }
+   handleButtonDec =()=> {
+    this.setState({
+      count: this.state.count - 1
+    })
+    
+  }
+
+
   render() {
     return (
       <div>
@@ -29,7 +37,8 @@ class App extends Component {
          count : {this.state.count}
          
         </p>
-        <button onClick={this.handleButtonClick}>Increment</button>
+        <button onClick={this.handleButtonInc}>Increment</button>
+        <button onClick={this.handleButtonDec}>Decrement</button>
       </div>
     );
   }
